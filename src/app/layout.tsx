@@ -4,7 +4,8 @@ import './globals.scss';
 import { Next13NProgress } from 'nextjs13-progress';
 
 import Header from './Header';
-import Starfield from '@/components/Starfield';
+import Starfield from 'react-starfield';
+import GitHubButton from './components/GitHubButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,11 +27,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<meta name="theme-color" content="#ffffff" />
 			</head>
 			<body className={inter.className}>
+				<GitHubButton />
 				<main className="flex flex-col min-h-screen text-white bg-zinc-950">
 					<Header />
 					{children}
 				</main>
-				<Starfield />
+				<Starfield
+				starCount={5000}
+				/>
 				<Next13NProgress color="#7644FF" height={6} />
 			</body>
 		</html>
