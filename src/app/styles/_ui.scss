@@ -1,0 +1,17 @@
+@layer components {
+    .glow {
+        box-shadow: 0 0 10px 6px rgb(71 28 115 / 70%);
+    }
+
+    .glow-card {
+        background: #000;
+        box-shadow: 0 8px 92px 20px rgb(71 28 115 / 70%);
+        backdrop-filter: blur(24px);
+        border-radius: 10px;
+        border: 1px solid #101010;
+    }
+
+    .loader-lg {
+        @apply loading loading-infinity w-[200px];
+    }
+}
